@@ -5,5 +5,8 @@ function addOneToEach(numbers) {
   // to produce a new array of numbers.
 }
 
-var result = addOneToEach([1, 2, 3, 4]);
-assert.deepEqual(result, [2, 3, 4, 5]);
+assert.deepEqual(
+  addOneToEach([1, 2, 3, 4]),
+  [2, 3, 4, 5],
+  'adds one to every item in an array'
+);
