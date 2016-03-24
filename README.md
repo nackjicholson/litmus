@@ -42,6 +42,10 @@ function addOneToEach(numbers) {
 }
 ```
 
+### exclaimAll
+
+Extremely similar to `addOneToEach`. Illustrates the same idea in a difference.
+
 ### isPalindrome
 
 Process an inbound string, to check if it is a palindrome.
