@@ -97,9 +97,9 @@ function digits(n) {
 }
 
 function wordifyNumber(number) {
-  return digits(number)
-    .map(n => digitToWord[n])
-    .join('-');
+  const ds = digits(number);
+  const words = ds.map(d => digitToWord[d]);
+  return words.join('-');
 }
 
 assert.deepEqual(
