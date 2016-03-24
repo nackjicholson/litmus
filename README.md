@@ -57,3 +57,54 @@ function isPalindrome(str) {
   return noSpacesStr === reversedStr;
 }
 ```
+
+### wordifyNumber
+
+Process an integer number and turn it into a string of words
+separated by hyphens. Each digit in the number being transformed to a word
+i.e. `wordifyNumber(8675309)` => `eight-six-seven-five-three-zero-nine`;
+
+Solution:
+  - set up a list of words (indexed in numerical order)
+  - write a recursive function to split an integer numeral into a list of it's digits.
+  - map the list of digits to word and join them with a hyphen.
+
+```js
+var assert = require('assert');
+
+const digitWords = [
+  'zero',
+  'one',
+  'two',
+  'three',
+  'four',
+  'five',
+  'six',
+  'seven',
+  'eight',
+  'nine'
+];
+
+function digits(n) {
+  if (n < 10) {
+    return [n];
+  }
+
+  const numeral = Math.floor(n / 10);
+  const digit = n % 10;
+
+  return digits(numeral).concat(digit) ;
+}
+
+function wordifyNumber(number) {
+  return digits(number)
+    .map(n => digitToWord[n])
+    .join('-');
+}
+
+assert.deepEqual(
+  wordifyNumber(8675309),
+  "eight-six-seven-five-three-zero-nine",
+  'wordifies a number, concatenated with dashes'
+);
+```
