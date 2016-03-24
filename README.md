@@ -44,7 +44,17 @@ function addOneToEach(numbers) {
 
 ### exclaimAll
 
-Extremely similar to `addOneToEach`. Illustrates the same idea in a difference.
+Illustrates the same "Can you transform an array?" exercise as `addOneToEach` in a slightly different way.
+
+Solution:
+
+```js
+function exclaimAll(sentences) {
+  return sentences.map(s => s + '!');
+}
+```
+
+`for` and `forEach` solutions are okay as well.
 
 ### isPalindrome
 
